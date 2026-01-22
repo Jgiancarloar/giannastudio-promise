@@ -4,7 +4,7 @@ import { getCountdown } from "../utils/getCountdown";
 
 const Counter = () => {
 
-    const eventDate = new Date(eventData.date.iso);
+    const eventDate = new Date(eventData.date.isoDemo);
     const [timeLeft, setTimeLeft] = useState(() =>
         getCountdown(eventDate)
     );
@@ -17,7 +17,7 @@ const Counter = () => {
         return () => clearInterval(interval);
     }, [eventDate]);
 
-    const date = new Date(eventData.date.iso);
+    const date = new Date(eventData.date.isoDemo);
 
     const month = date.toLocaleDateString("es-ES", { month: "long" });
     const weekday = date.toLocaleDateString("es-ES", { weekday: "long" });

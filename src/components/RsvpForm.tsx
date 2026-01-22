@@ -3,13 +3,14 @@ import { eventData } from "../data/eventData";
 
 const RsvpForm = () => {
 
-    const date = new Date(eventData.date.iso);
+    const date = new Date(eventData.date.isoDemo);
     
         const month = date.toLocaleDateString("es-ES", { month: "long" });
         const day = date.getDate();
 
-    const whatsappUrl =
-        "https://wa.me/51906069833?text=Hola%20😊,%20confirmo%20mi%20asistencia%20a%20la%20boda.%20¡Muchas%20gracias!";
+        const whatsappUrl =
+        "https://wa.me/51956064239?text=Hola%20😊,%20confirmo%20mi%20asistencia%20a%20la%20boda.%0A%0AAdem%C3%A1s,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20esta%20invitaci%C3%B3n.%20Gracias.";
+      
 
     return (
         <section className='flex flex-col items-center px-10 text-center'>
