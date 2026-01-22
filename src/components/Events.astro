@@ -1,0 +1,30 @@
+---
+import { eventData } from "../data/eventData.js";
+import { eventIcons } from "../data/eventIcons.js";
+---
+
+<section class="flex flex-col gap-10">
+    {
+        eventData.events.map((item) => {
+            const Icon = eventIcons[item.icon];
+
+            return (
+                <div class="flex flex-col items-center">
+                    <div class="h-20 w-20 mb-1">
+                        <Icon />
+                    </div>
+                    <p class="font-semibold">{item.time} Hrs.</p>
+                    <p class="font-bold mb-3 uppercase">{item.title}</p>
+                    <a
+                        href={item.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bg-[#791925] px-5 py-3 rounded-full text-sm text-white uppercase"
+                    >
+                        Ver ubicación
+                    </a>
+                </div>
+            );
+        })
+    }
+</section>

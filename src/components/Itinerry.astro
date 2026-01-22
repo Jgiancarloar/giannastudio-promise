@@ -1,0 +1,41 @@
+---
+import { eventData } from "../data/eventData.js";
+import { eventIcons } from "../data/eventIcons.js";
+---
+
+<section class="flex flex-col items-center px-5">
+    <p class="font-bold mb-5 text-xl text-center uppercase">Itinerario</p>
+
+    <div class="flex flex-col gap-2 items-center">
+        {
+            eventData.itinerary.map((item, index) => {
+                const Icon = eventIcons[item.icon];
+
+                return (
+                    <>
+                        <div class="flex flex-col items-center">
+                            <div class="h-16 w-16 flex items-center justify-center">
+                                <Icon />
+                            </div>
+                            <p class="font-bold opacity-50 text-2xl">
+                                {item.time}
+                            </p>
+                            <p class="font-medium text-xl">{item.title}</p>
+                        </div>
+
+                        {/* Vertical line except last */}
+                        {index !== eventData.itinerary.length - 1 && (
+                            <>
+                                <div />
+                                <div class="flex justify-center">
+                                    <div class="bg-gray-300 h-8 w-px" />
+                                </div>
+                                <div />
+                            </>
+                        )}
+                    </>
+                );
+            })
+        }
+    </div>
+</section>

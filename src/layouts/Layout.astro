@@ -1,13 +1,28 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<title>Nos casamos 💍</title>
+		
+		<meta
+			property="og:title"
+			content="Nos casamos 💍"
+		/>
+		<meta
+			property="og:description"
+			content="Estás invitado a nuestra boda ✨ Mira los detalles aquí"
+		/>
+		<meta property="og:type" content="website" />
 	</head>
-	<body>
+	<body class="font-ct text-[#791925]">
 		<slot />
 	</body>
 </html>
